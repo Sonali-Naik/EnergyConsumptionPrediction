@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <title>Energy Consumption Prediction</title>
+  <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWZt5nQydb5R2UJu6GaXvFUju8ysLXEcSUBQ&usqp=CAU">
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -49,6 +51,13 @@
 border: 0;
 }
 
+.gen{
+    color: black;
+  -webkit-text-fill-color: #FFFF00; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
   </style>
 </head>
 <body>
@@ -79,7 +88,7 @@ border: 0;
 </nav>
 
 <div class="container">
-    <form class="form-inline form-1" action="/output">
+    <form class="form-inline form-1" action="/output" method="post">
         <div class="form-group">
             <label for="fname">Prediction for : &nbsp; </label>
             <input type="month" class="form-control" id="bdaymonth" name="bdaymonth">
@@ -116,25 +125,34 @@ border: 0;
 
 <div class="container">
     <div class="capabilities-container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3 class="text-center gen">Total Generation : {{ total }} MW</h3>
+        </div>
+    </div>
       <div class="row">
       
         <div class="col-xs-12">
           <h3 class="text-center">Renewable Energy</h3>
         </div>
+        
     
         <div class="col-md-4 col-sm-4 col-xs-6">
            <img src="https://cdn-icons-png.flaticon.com/512/6973/6973505.png" class="img-thumbnail" alt="Cinque Terre" width="304" height="236"> 
           <div class="helped-title">Wind Energy</div>
+          <div class="helped-title">{{ wind }} MW</div>
         </div>
         
         <div class="col-md-4 col-sm-4 col-xs-6">
             <img src="https://cdn-icons-png.flaticon.com/512/3301/3301660.png" class="img-thumbnail" alt="Cinque Terre" width="304" height="236"> 
            <div class="helped-title">Solar Energy</div>
+           <div class="helped-title">{{ solar }} MW</div>
          </div>
         
          <div class="col-md-4 col-sm-4 col-xs-6">
             <img src="https://cdn-icons-png.flaticon.com/512/5451/5451435.png" class="img-thumbnail" alt="Cinque Terre" width="304" height="236"> 
            <div class="helped-title">Hydro Energy</div>
+           <div class="helped-title">{{ hydro }} MW</div>
          </div>  
         </div>
 
@@ -154,6 +172,7 @@ border: 0;
             <div class="col-md-4 col-sm-4 col-xs-6">
                <img src="https://cdn-icons-png.flaticon.com/512/316/316357.png" class="img-thumbnail" alt="Cinque Terre" width="304" height="236"> 
               <div class="helped-title">Coal Energy</div>
+              <div class="helped-title">{{ thermal }} MW</div>
             </div>
             
             <div class="col-md-4 col-sm-4 col-xs-6">
