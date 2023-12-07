@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Energy Consumption Prediction</title>
+  <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWZt5nQydb5R2UJu6GaXvFUju8ysLXEcSUBQ&usqp=CAU">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  .bkg-image{
+    background-image: url('https://imengine.public.prod.sbp.infomaker.io/?uuid=a1744a3b-b53a-5e22-ad2d-f38db5cccecd&function=cropresize&type=preview&source=false&q=75&crop_w=0.99999&crop_h=0.84375&x=0&y=0&width=5760&height=3240');
+    opacity: 0.6;
+    background-size: 2000px 500px;
+    width: 100%;
+    height: 300px;
+
+  }
+  .res{
+    resize: both;
+    overflow: auto;
+  }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center bkg-image res" style="margin-bottom:0" >
+    <h1 style="margin-bottom:0">ELECTRICAL ENERGY CONSUMPTION FORECASTING</h1>
+    <p>ISB AMPBA Batch 19 Group 8</p>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="AboutUs">Group8</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="home">Home</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>About Us</h2>
+      <h5>Group of 4 people:</h5>
+      <div>
+      Sonali NAIK 12220039 <br>
+      Manan Trivedi	 12220030 <br>
+      Harish M	 12220040 <br>
+      Kusala Vanam	 12220037 <br>
+    </div>
+     
+      <p>AMPBA Batch 19 - Group 8</p>
+      <hr class="hidden-sm hidden-md hidden-lg">
+    </div>
+    <div class="col-sm-8">
+      <h2>Electrcical Energy Consumption Prediction</h2>
+      <h5>Predicting energy consumption for India acorss various energy sectors</h5>
+      <div >
+      <p>The "Electrical Energy Consumption Prediction" project is a machine learning (ML) model implemented within a Flask web application. The goal of this project is to predict electrical energy consumption based on historical data, allowing users to make informed decisions about energy usage and optimize resource allocation.
+
+        The project begins by collecting historical data on electrical energy consumption, including relevant features such as time of day, day of the week, temperature, and other potential factors influencing energy usage. This data is used to train a machine learning model, which could be a regression model such as linear regression or more advanced models like Random Forest or Gradient Boosting.
+        
+        Once the model is trained and validated, it is integrated into a Flask web application. Flask is a lightweight and flexible web framework in Python that enables the deployment of machine learning models into production environments. The user interface is designed to be user-friendly, allowing users to input relevant features and obtain predictions for future energy consumption.
+        
+        The Flask application serves as the bridge between the machine learning model and end-users. Users can access the prediction interface through a web browser, input specific parameters (such as date, time, temperature, etc.), and receive real-time predictions for electrical energy consumption. The application may also provide additional insights, visualizations, or historical comparisons to enhance the user experience.</p>
+      </div>
+      <br>      
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <img src="https://www.isb.edu/content/dam/sites/isb/about-isb/ISB_transparent_logo.png" alt="Flowers in Chania" style="width:100px;height:50px;">
+</div>
+
+</body>
+</html>
