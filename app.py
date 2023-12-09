@@ -51,6 +51,7 @@ def get_month_year(month, year):
 def get_maximum_demand(month_no, year_no):
     demand = pd.read_csv("data/processed_data.csv")
     max_demand = demand[demand['month']==month_no][demand['year']==year_no]['Max. Demand Met during the day (MW)'].max()
+    max_demand = max_demand * 0.024 #1 MW power plant can produce 0.024 MU in a day.
     total_consumption = demand[demand['month']==month_no][demand['year']==year_no]['Total_consumption'].mean()    
     return max_demand, total_consumption
 
